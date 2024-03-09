@@ -1,0 +1,142 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #ffcc00, #ff6600);
+  background-attachment: fixed;
+}
+
+.container {
+  min-width: 400px;
+}
+
+.title {
+  color: azure;
+  font-size: 1.7rem;
+  font-family: "Lucida Sans", sans-serif;
+  margin: 2.5rem auto 2rem;
+}
+
+.inner-container {
+  width: min(85%, 500px);
+  margin: 0 auto 1rem;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  box-shadow: 8px 8px 4px 0px #d2691e;
+}
+
+.search-form {
+  padding: 1rem;
+}
+
+.search-input,
+.search-button {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  display: inline-block;
+  height: 2.5rem;
+}
+
+.search-input {
+  width: 55%;
+  border: 1px solid cadetblue;
+  border-radius: 5px;
+}
+
+.search-button {
+  border-radius: 1.5rem;
+  width: 25%;
+  background-color: cadetblue;
+  border: none;
+  cursor: pointer;
+}
+
+.pokemon-result-div {
+  width: 90%;
+  height: 250px;
+  margin: 0 auto 1rem;
+  padding: 0.8rem;
+  border-radius: 7px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.identifier {
+  height: 3rem;
+}
+
+.identifier p {
+  border: 1px solid #333;
+  text-align: left;
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.identifier p:first-of-type {
+  font-weight: 550;
+
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+.identifier p:last-of-type {
+  font-size: 0.8rem;
+}
+
+.image-div {
+  display: flex;
+  height: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.type-div {
+  height: 2.5rem;
+}
+
+.stats-div {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(7, 2rem);
+  grid-template-areas:
+    "left right"
+    "side main"
+    "side main"
+    "side main"
+    "side main"
+    "side main"
+    "side main";
+}
+
+.stats-div .left {
+  grid-area: left;
+}
+
+.stats-div .right {
+  grid-area: right;
+}
+
+.stats-div span {
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 0px cadetblue;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
