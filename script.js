@@ -1,7 +1,6 @@
 const inputEl = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-button");
 const searchForm = document.getElementById("search-form");
-
 const imageEl = document.getElementById("image-div");
 const nameEl = document.getElementById("pokemon-name");
 const idEl = document.getElementById("pokemon-id");
@@ -15,22 +14,20 @@ const spAttackEl = document.getElementById("special-attack");
 const spDefenseEl = document.getElementById("special-defense");
 const speedEl = document.getElementById("speed");
 const statsArr = [hpEl, attackEl, defenseEl, spAttackEl, spDefenseEl, speedEl];
-let pokemonArr = [];
-let pokemonDataObj = {};
 
 const allPokemon = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
+let pokemonArr = [];
+let pokemonDataObj = {};
 let pokemonUrl = "";
 
 const getData = async (url) => {
   const request = await fetch(url);
   const data = await request.json();
-  console.log(data);
   return data;
 };
 getData(allPokemon)
   .then((data) => {
     pokemonArr = data.results;
-    console.log(pokemonArr);
   })
   .catch((err) => console.error("a problem occur", err));
 
@@ -40,13 +37,13 @@ const updateUI = (pokemon) => {
   idEl.textContent = "#" + id;
   weightEl.textContent = "Weight: " + weight;
   heightEl.textContent = "Height: " + height;
-  imageEl.innerHTML = `<img src=${sprites.front_default} alt="${name}-img" class='pokemon-img'>`;
+  imageEl.innerHTML = `<img  src=${sprites.front_default} alt="${name}-img" id="sprite" class='pokemon-img'>`;
   types.forEach((obj) => {
     typesEl.innerHTML += `<span class="${obj.type.name} box">${obj.type.name}</span> `;
   });
 
   stats.forEach((obj, index) => {
-    for (element of statsArr) {
+    for (const element of statsArr) {
       if (statsArr.indexOf(element) === index) {
         const { base_stat } = obj;
         element.textContent = base_stat;
@@ -57,7 +54,6 @@ const updateUI = (pokemon) => {
 
 const checkInput = (value) => {
   value = inputEl.value.toLowerCase();
-  console.log(value);
   if (!value) {
     alert("Enter valid Pokémon Name or Id");
     return;
@@ -67,12 +63,10 @@ const checkInput = (value) => {
       pokemonUrl = allPokemon + "/" + value;
     }
   });
-  console.log(pokemonUrl);
   if (pokemonUrl) {
     getData(pokemonUrl)
       .then((data) => {
         pokemonDataObj = data;
-        console.log(pokemonDataObj);
         typesEl.innerHTML = "";
         updateUI(pokemonDataObj);
       })
@@ -80,8 +74,6 @@ const checkInput = (value) => {
   } else {
     alert("Pokémon not Found");
   }
-
-  pokemonUrl = "";
 };
 
 searchForm.addEventListener("submit", (e) => {

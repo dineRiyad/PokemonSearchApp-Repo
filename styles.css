@@ -49,14 +49,14 @@ body {
 
 .search-input {
   width: 55%;
-  border: 1px solid cadetblue;
+  border: 1px solid orangered;
   border-radius: 5px;
 }
 
 .search-button {
   border-radius: 1.5rem;
   width: 25%;
-  background-color: cadetblue;
+  background-color: orangered;
   border: none;
   cursor: pointer;
 }
@@ -78,7 +78,7 @@ body {
 
 .identifier p {
   text-align: left;
-  width: 60%;
+  width: 11rem;
   display: flex;
   justify-content: space-between;
 }
@@ -195,11 +195,6 @@ body {
   grid-template-rows: repeat(7, 2rem);
   grid-template-areas:
     "left right"
-    "side main"
-    "side main"
-    "side main"
-    "side main"
-    "side main"
     "side main";
 }
 
@@ -213,8 +208,8 @@ body {
 
 .stats-div span {
   border-radius: 5px;
-  box-shadow: 2px 2px 4px 0px cadetblue;
-  background-color: cadetblue;
+  box-shadow: 2px 2px 4px 0px orangered;
+  background-color: orangered;
   display: flex;
   justify-content: center;
   align-items: center;
