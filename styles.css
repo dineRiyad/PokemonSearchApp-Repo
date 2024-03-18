@@ -37,14 +37,13 @@ body {
 }
 
 .search-form {
-  padding: 1rem;
+  padding: 1rem 1rem 0;
 }
 
 .search-input,
 .search-button {
-  margin: 1rem 0;
+  margin: 1rem 0 0.5rem;
   padding: 0.5rem;
-  display: inline-block;
   height: 2.5rem;
 }
 
@@ -66,7 +65,7 @@ body {
   width: 90%;
   height: 250px;
   margin: 0 auto 1rem;
-  padding: 0.8rem;
+  padding: 0.5rem;
   border-radius: 7px;
   background-color: white;
   display: flex;
@@ -78,9 +77,8 @@ body {
 }
 
 .identifier p {
-  border: 1px solid #333;
   text-align: left;
-  width: 55%;
+  width: 60%;
   display: flex;
   justify-content: space-between;
 }
@@ -89,7 +87,7 @@ body {
   font-weight: 550;
 
   text-transform: uppercase;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2rem;
 }
 .identifier p:last-of-type {
   font-size: 0.8rem;
@@ -102,10 +100,91 @@ body {
   align-items: center;
 }
 
+.pokemon-img {
+  width: 150px;
+  height: 150px;
+}
+
 .type-div {
   height: 2.5rem;
 }
 
+.types-par {
+  text-align: left;
+}
+
+.box {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 0.4rem 0 0.4rem 0;
+  box-shadow: 2px 2px 3px 0px #43220bce;
+  width: 5rem;
+  height: 1.6rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 0.2rem;
+  color: aliceblue;
+  font-size: 0.8rem;
+}
+
+.bug {
+  background-color: darkolivegreen;
+}
+.dark {
+  background-color: black;
+}
+.dragon {
+  background-color: darkmagenta;
+}
+.electric {
+  background-color: goldenrod;
+}
+.fairy {
+  background-color: indigo;
+}
+.fighting {
+  background-color: tomato;
+}
+.fire {
+  background-color: darkred;
+}
+.flying {
+  background-color: darkcyan;
+}
+
+.ghost {
+  background-color: thistle;
+}
+.grass {
+  background-color: greenyellow;
+}
+.ground {
+  background-color: darkkhaki;
+}
+.ice {
+  background-color: darkblue;
+}
+.normal {
+  background-color: coral;
+}
+.poison {
+  background-color: darkslateblue;
+}
+.psychic {
+  background-color: gray;
+}
+.rock {
+  background-color: sienna;
+}
+.steel {
+  background-color: steelblue;
+}
+.stellar {
+  background-color: violet;
+}
+.water {
+  background-color: blue;
+}
 .stats-div {
   width: 90%;
   margin: 0 auto;

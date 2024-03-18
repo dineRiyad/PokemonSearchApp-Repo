@@ -13,7 +13,12 @@
       <div class="inner-container">
         <form id="search-form" class="search-form">
           <label for="search-input">Search for Pokemon Name or ID: </label>
-          <input type="text" id="search-input" class="search-input" required />
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            name="pokemon"
+            required />
           <button type="button" id="search-button" class="search-button">
             Search
           </button>
@@ -23,9 +28,9 @@
             <p><span id="pokemon-name"></span><span id="pokemon-id"></span></p>
             <p><span id="weight"></span><span id="height"></span></p>
           </div>
-          <div class="image-div"></div>
+          <div class="image-div" id="image-div"></div>
           <div class="types-div">
-            <p id="types"></p>
+            <p id="types" class="types-par"></p>
           </div>
         </div>
         <div class="stats-div">
