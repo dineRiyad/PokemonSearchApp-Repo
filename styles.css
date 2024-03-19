@@ -63,7 +63,7 @@ body {
 
 .pokemon-result-div {
   width: 90%;
-  height: 250px;
+  min-height: 250px;
   margin: 0 auto 1rem;
   padding: 0.5rem;
   border-radius: 7px;
@@ -73,7 +73,7 @@ body {
 }
 
 .identifier {
-  height: 3rem;
+  min-height: 3rem;
 }
 
 .identifier p {
